@@ -1,0 +1,32 @@
+[
+    {
+        "id_vendedor": 101,
+        "nome": "Ana Silva",
+        "meta_mensal": 500000.00,
+        "region": "Sudeste"
+    },
+    {
+        "id_vendedor": 102,
+        "nome": "Bruno Costa",
+        "meta_mensal": 300000.00,
+        "region": "Norte"
+    },
+    {
+        "id_vendedor": 103,
+        "nome": "Carlos Mendes",
+        "meta_mensal": 450000.00,
+        "region": "Sudeste"
+    },
+    {
+        "id_vendedor": 104,
+        "nome": "Sofia Lopes",
+        "meta_mensal": 250000.00,
+        "region": "Sul"
+    },
+    {
+        "id_vendedor": 105,
+        "nome": "David Rocha",
+        "meta_mensal": 350000.00,
+        "region": "Nordeste"
+    }
+]

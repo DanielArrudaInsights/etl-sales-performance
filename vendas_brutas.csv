@@ -1,0 +1,11 @@
+id_venda,id_vendedor,valor_venda,data_venda,id_cliente,modelo_automovel
+1,101,150000.00,2024-10-01,C1001,Sedan Luxo
+2,102,85000.00,2024-10-02,C1002,SUV Urbano
+3,101,220000.00,2024-10-03,C1003,Esportivo Premium
+4,103,90000.00,2024-10-04,C1004,Sedan Luxo
+5,102,175000.00,2024-10-05,C1005,SUV Urbano
+6,101,110000.00,2024-10-06,C1006,Esportivo Premium
+7,103,130000.00,2024-10-07,C1007,Sedan Luxo
+8,104,75000.00,2024-10-08,C1008,SUV Urbano
+9,104,195000.00,2024-10-09,C1009,Esportivo Premium
+10,105,105000.00,2024-10-10,C1010,Sedan Luxo
