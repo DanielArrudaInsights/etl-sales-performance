@@ -2,9 +2,15 @@
 
 ## Objetivo do Projeto
 
-Este projeto demonstra a construção de um **Pipeline ETL (Extract, Transform, Load)** modular e robusto, integrando dados de **múltiplas fontes (CSV e JSON)** a um banco de dados relacional (PostgreSQL) para gerar KPIs de Performance de Vendas.
+O propósito deste projeto é **estabelecer um Pipeline ETL (Extract, Transform, Load)** com estrutura modular.
 
-O projeto atende diretamente aos requisitos de **Automação de Processos** e **Estruturação de Bases Complexas** exigidos em vagas de Estágio em Análise de Dados com foco em BI/IA.
+O desenvolvimento visa:
+
+1.  **Integrar Múltiplas Fontes:** Unificar dados de **múltiplas fontes (CSV e JSON)** em um banco de dados relacional (PostgreSQL).
+2.  **Estruturar a Base:** Aplicar conceitos de **Modelagem e Estruturação de Bases de Dados** (DDL, Chaves Estrangeiras).
+3.  **Gerar Insights:** Processar os dados carregados para viabilizar a criação de **KPIs de Desempenho de Vendas** estratégicos.
+
+Este trabalho busca demonstrar a **aplicação prática de Automação de Processos** e raciocínio lógico em Python/SQL.
 
 ## Stack Tecnológica e Arquitetura
 
@@ -14,34 +20,29 @@ O projeto utiliza uma arquitetura modular baseada em Python, priorizando a manut
 | :--- | :--- | :--- |
 | **Arquitetura (Código)** | Python (Classes, OOP, Estrutura Modular) | Orquestração do pipeline, garantindo manutenibilidade. |
 | **Transformação** | Python (Pandas) | Leitura de CSV e JSON, cruzamento de dados de vendas e metas (Data Wrangling). |
-| **Modelagem e Carga** | PostgreSQL (psycopg2) | Definição de esquema relacional (Tabela Fato/Dimensão com Chaves Estrangeiras) e inserção dos dados. |
+| **Modelagem e Carga** | PostgreSQL (psycopg2) | Definição de esquema relacional e inserção dos dados. |
 | **Análise de Dados** | SQL | Geração de KPIs de Performance de Vendas para suporte à decisão. |
 
 ## Principais Resultados (KPIs Gerados)
 
 Os dados foram estruturados para permitir análises de desempenho imediatas.
 
-### 1. KPI Principal: Performance de Vendedores vs. Meta
+### 1. KPI Principal: Desempenho de Vendedores vs. Meta
 
-Mede a eficiência de cada vendedor em relação à meta de vendas mensal.
-
-| nome\_vendedor | regiao | meta\_mensal | total\_vendido | **percentual\_alcance** |
+Mede a eficiência de cada vendedor em relação à meta de vendas mensais.
+| nome_vendedor | regiao | meta_mensal | total_vendido | percentual_alcance |
 | :--- | :--- | :--- | :--- | :--- |
-| Sofia Lopes | Sul | 250000.00 | 270000.00 | **108.00** |
+| Sofia Lopes | Sul | 250000.00 | 270000.00 | 108.00 |
 | Ana Silva | Sudeste | 500000.00 | 480000.00 | 96.00 |
 | Bruno Costa | Norte | 300000.00 | 260000.00 | 86.67 |
 | Carlos Mendes | Sudeste | 450000.00 | 220000.00 | 48.89 |
 | David Rocha | Nordeste | 350000.00 | 105000.00 | 30.00 |
-
-**Insight de Negócio:** Sofia Lopes superou a meta (108%). O baixo desempenho de Carlos Mendes e David Rocha requerem atenção imediata da gestão para investigar causas (ex: treinamento, leads de má qualidade, ou falta de foco regional).
+Insight de Negócio: Sofia Lopes superou a meta (108%). O baixo desempenho de Carlos Mendes e David Rocha requer atenção imediata da gestão para investigação de causas (ex: treinamento, leads de má qualidade, ou falta de foco regional).
 
 ### 2. Valor Médio de Venda por Modelo de Automóvel
 
-Ajuda a gestão a focar em modelos de maior *ticket* médio.
-
-*(Estes resultados foram extraídos do seu PostgreSQL)*
-
-| modelo\_automovel | total\_vendas | valor\_medio\_venda\_arredondado |
+Ajuda a gestão a focar em modelos de maior ticket médio.
+| modelo_automovel | total_vendas | valor_medio_venda_arredondado |
 | :--- | :--- | :--- |
 | Esportivo Premium | 3 | 175000 |
 | SUV Urbano | 4 | 133750 |
