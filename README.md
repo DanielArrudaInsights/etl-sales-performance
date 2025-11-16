@@ -37,7 +37,8 @@ Mede a eficiência de cada vendedor em relação à meta de vendas mensais.
 | Bruno Costa | Norte | 300000.00 | 260000.00 | 86.67 |
 | Carlos Mendes | Sudeste | 450000.00 | 220000.00 | 48.89 |
 | David Rocha | Nordeste | 350000.00 | 105000.00 | 30.00 |
-Insight de Negócio: Sofia Lopes superou a meta (108%). O baixo desempenho de Carlos Mendes e David Rocha requer atenção imediata da gestão para investigação de causas (ex: treinamento, leads de má qualidade, ou falta de foco regional).
+
+**Insight de Negócio:** Sofia Lopes superou a meta (108%). O baixo desempenho de Carlos Mendes e David Rocha requer atenção imediata da gestão para investigação de causas (ex: treinamento, leads de má qualidade, ou falta de foco regional).
 
 ### 2. Valor Médio de Venda por Modelo de Automóvel
 
@@ -47,27 +48,3 @@ Ajuda a gestão a focar em modelos de maior ticket médio.
 | Esportivo Premium | 3 | 175000 |
 | SUV Urbano | 4 | 133750 |
 | Sedan Luxo | 3 | 126667 |
-
----
-
-## Estrutura e Execução do Projeto
-
-O pipeline ETL é orquestrado pela **Classe `ETLPipeline`** no `02_etl_pipeline.py`.
-
-1.  **Configuração do DB:** Rodar o `01_create_sales_db.sql` no PostgreSQL.
-2.  **Execução do ETL (Python):** O script limpa as tabelas, extrai o CSV e JSON e carrega os dados.
-    ```bash
-    python 02_etl_pipeline.py
-    ```
-3.  **Análise (SQL):** Geração dos KPIs.
-    ```sql
-    -- Rodar as queries do 03_sales_analysis.sql no cliente SQL
-    ```
-
-**Arquivos no Repositório:**
-
-* `01_create_sales_db.sql` (Criação do Esquema DDL)
-* `02_etl_pipeline.py` (Pipeline Python Modular - OOP, CSV/JSON)
-* `03_sales_analysis.sql` (KPIs SQL)
-* `vendas_brutas.csv` (Fonte de dados de vendas)
-* `metas_vendedores.json` (Fonte de dados de metas)
