@@ -19,7 +19,7 @@ O arquivo **.pbix** está disponível neste repositório para validação da mod
 ---
 
 ## Visão Geral do Dashboard
-![Captura de tela do Dashboard de Vendas Finalizado - KPI 1, 2 e 3](Screenshot_Final.png)
+![Captura de tela do Dashboard de Vendas Finalizado - KPI 1, 2 e 3](Screenshot_Final.jpg)
 
 ## Ferramentas Utilizadas
 
