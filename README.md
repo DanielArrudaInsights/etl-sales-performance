@@ -1,50 +1,43 @@
-# Pipeline ETL de Performance e Metas de Vendas
+# Projeto de Portfólio: Análise de Vendas Automotivas (Power BI & DAX)
 
-## Objetivo do Projeto
+Este dashboard foi desenvolvido para aprimorar a capacidade de monitoramento de KPIs de Vendas, Retenção e Performance, utilizando o Power BI e a linguagem de cálculo DAX. O objetivo principal é transformar dados brutos em insights acionáveis para apoiar decisões estratégicas na gestão de equipes e produtos de alto valor.
 
-O propósito deste projeto é **estabelecer um Pipeline ETL (Extract, Transform, Load)** com estrutura modular.
+## Dashboard Final
+![Captura de tela do Dashboard de Vendas Finalizado - KPI 1, 2 e 3](Screenshot_Final.jpg)
 
-O desenvolvimento visa:
+---
 
-1.  **Integrar Múltiplas Fontes:** Unificar dados de **múltiplas fontes (CSV e JSON)** em um banco de dados relacional (PostgreSQL).
-2.  **Estruturar a Base:** Aplicar conceitos de **Modelagem e Estruturação de Bases de Dados** (DDL, Chaves Estrangeiras).
-3.  **Gerar Insights:** Processar os dados carregados para viabilizar a criação de **KPIs de Desempenho de Vendas** estratégicos.
+## Ferramentas e Metodologia
 
-Este trabalho busca demonstrar a **aplicação prática de Automação de Processos** e raciocínio lógico em Python/SQL.
+O projeto utilizou a metodologia de análise de dados para transformar dados transacionais (vendas) e dados de recursos humanos (vendedores) em métricas de performance e lucratividade.
 
-## Stack Tecnológica e Arquitetura
+* **Power BI:** Para modelagem de dados (relacionamento entre tabelas) e visualização.
+* **DAX (Data Analysis Expressions):** Utilizado para criar medidas avançadas, garantindo cálculos precisos de performance e Ticket Médio.
 
-O projeto utiliza uma arquitetura modular baseada em Python, priorizando a manutenibilidade e a rastreabilidade do código.
+---
 
-| Componente | Tecnologia | Função no Projeto |
-| :--- | :--- | :--- |
-| **Arquitetura (Código)** | Python (Classes, OOP, Estrutura Modular) | Orquestração do pipeline, garantindo manutenibilidade. |
-| **Transformação** | Python (Pandas) | Leitura de CSV e JSON, cruzamento de dados de vendas e metas (Data Wrangling). |
-| **Modelagem e Carga** | PostgreSQL (psycopg2) | Definição de esquema relacional e inserção dos dados. |
-| **Análise de Dados** | SQL | Geração de KPIs de Performance de Vendas para suporte à decisão. |
+## KPIs e Insights Chave para a Gestão
 
-## Principais Resultados (KPIs Gerados)
+O dashboard foi estruturado em torno de três KPIs fundamentais:
 
-Os dados foram estruturados para permitir análises de desempenho imediatas.
+### 1. KPI 1: Performance de Vendedores vs. Meta
+**Visual:** Gráfico de Colunas Agrupadas e Linha.
+**Insight:** O gráfico identifica claramente os vendedores que estão acima e abaixo da meta estabelecida. O cálculo do alcance de meta foi realizado via DAX.
+**Ação:** Permite à gestão reconhecer imediatamente os top-performers e focar em estratégias de treinamento para aqueles abaixo da linha de meta.
 
-### 1. KPI Principal: Desempenho de Vendedores vs. Meta
+### 2. KPI 2: Ticket Médio de Venda por Modelo
+**Visual:** Gráfico de Colunas.
+**Insight:** A análise, calculada através de uma **Medida DAX (AVERAGE)**, revelou que o modelo **"Esportivo Premium"** possui o Ticket Médio mais elevado.
+**Ação:** O insight sugere focar esforços de marketing e vendas nos modelos de maior valor agregado, como o Esportivo Premium.
 
-Mede a eficiência de cada vendedor em relação à meta de vendas mensais.
-| nome_vendedor | regiao | meta_mensal | total_vendido | percentual_alcance |
-| :--- | :--- | :--- | :--- | :--- |
-| Sofia Lopes | Sul | 250000.00 | 270000.00 | 108.00 |
-| Ana Silva | Sudeste | 500000.00 | 480000.00 | 96.00 |
-| Bruno Costa | Norte | 300000.00 | 260000.00 | 86.67 |
-| Carlos Mendes | Sudeste | 450000.00 | 220000.00 | 48.89 |
-| David Rocha | Nordeste | 350000.00 | 105000.00 | 30.00 |
+### 3. KPI 3: Distribuição Regional de Vendas
+**Visual:** Gráfico de Rosca.
+**Insight:** Este KPI demonstra a alocação de vendas por região. O gráfico está formatado para exibir apenas o **Percentual do Total**, destacando a concentração do volume de vendas na região mais forte.
+**Ação:** Ajuda a alocar orçamentos de mídia e recursos de equipe com base nas regiões com maior volume transacional.
 
-**Insight de Negócio:** Sofia Lopes superou a meta (108%). O baixo desempenho de Carlos Mendes e David Rocha requer atenção imediata da gestão para investigação de causas (ex: treinamento, leads de má qualidade, ou falta de foco regional).
+---
 
-### 2. Valor Médio de Venda por Modelo de Automóvel
+## Estrutura do Repositório
 
-Ajuda a gestão a focar em modelos de maior ticket médio.
-| modelo_automovel | total_vendas | valor_medio_venda_arredondado |
-| :--- | :--- | :--- |
-| Esportivo Premium | 3 | 175000 |
-| SUV Urbano | 4 | 133750 |
-| Sedan Luxo | 3 | 126667 |
+* `Dashboard_Vendas.pbix`: Arquivo editável do projeto Power BI.
+* `Screenshot_Final.jpg`: Imagem de alta qualidade do dashboard finalizado.
