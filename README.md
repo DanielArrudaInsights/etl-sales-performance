@@ -1,43 +1,51 @@
 # Projeto de Portfólio: Análise de Vendas Automotivas (Power BI & DAX)
 
-Este dashboard foi desenvolvido para aprimorar a capacidade de monitoramento de KPIs de Vendas, Retenção e Performance, utilizando o Power BI e a linguagem de cálculo DAX. O objetivo principal é transformar dados brutos em insights acionáveis para apoiar decisões estratégicas na gestão de equipes e produtos de alto valor.
-
-## Dashboard Final
-![Captura de tela do Dashboard de Vendas Finalizado - KPI 1, 2 e 3](Screenshot_Final.jpg)
+Este projeto demonstra a criação de um Dashboard de Business Intelligence para monitorar a performance de vendas de veículos. O objetivo foi transformar dados brutos em **insights acionáveis**, comprovando proficiência na modelagem de dados e na criação de medidas analíticas robustas.
 
 ---
 
-## Ferramentas e Metodologia
+## Demonstração Interativa e Código (Obrigatório)
 
-O projeto utilizou a metodologia de análise de dados para transformar dados transacionais (vendas) e dados de recursos humanos (vendedores) em métricas de performance e lucratividade.
+O valor analítico deste projeto reside na interatividade e nos cálculos DAX customizados.
 
-* **Power BI:** Para modelagem de dados (relacionamento entre tabelas) e visualização.
-* **DAX (Data Analysis Expressions):** Utilizado para criar medidas avançadas, garantindo cálculos precisos de performance e Ticket Médio.
+### Acesso Interativo (Recomendado para Avaliação)
+Clique no link abaixo para interagir com o Dashboard completo no Power BI Service. Todos os filtros, tooltips e interatividade estão ativos.
+
+**[Dashboard Interativo - Vendas Automotivas](https://app.powerbi.com/links/BBoXspi7PU?ctid=da49a844-e2e3-40af-86a6-c3819d704f49&pbi_source=linkShare)**
+
+### Código-Fonte
+O arquivo **.pbix** está disponível neste repositório para validação da modelagem de dados e das fórmulas DAX customizadas.
 
 ---
 
-## KPIs e Insights Chave para a Gestão
+## Visão Geral do Dashboard
+![Captura de tela do Dashboard de Vendas Finalizado - KPI 1, 2 e 3](Screenshot_Final.png)
 
-O dashboard foi estruturado em torno de três KPIs fundamentais:
+## Ferramentas Utilizadas
+
+* **Power BI:** Modelagem, Transformação (Power Query) e Visualização.
+* **DAX (Data Analysis Expressions):** Criação de medidas customizadas de alta precisão.
+
+---
+
+## KPIs e Lógica Analítica
+
+O dashboard foi estruturado em torno de três indicadores críticos, com foco na prova do conhecimento em DAX e agregação de dados:
 
 ### 1. KPI 1: Performance de Vendedores vs. Meta
-**Visual:** Gráfico de Colunas Agrupadas e Linha.
-**Insight:** O gráfico identifica claramente os vendedores que estão acima e abaixo da meta estabelecida. O cálculo do alcance de meta foi realizado via DAX.
-**Ação:** Permite à gestão reconhecer imediatamente os top-performers e focar em estratégias de treinamento para aqueles abaixo da linha de meta.
+**Lógica:** O cálculo da performance envolveu a criação de uma medida que compara Vendas Totais versus uma meta predefinida, essencial para avaliar o desempenho da equipe de forma objetiva.
+**Insight:** Permite identificar rapidamente os *top-performers* e direcionar o foco da gestão para o desenvolvimento dos vendedores abaixo da linha de meta.
 
-### 2. KPI 2: Ticket Médio de Venda por Modelo
-**Visual:** Gráfico de Colunas.
-**Insight:** A análise, calculada através de uma **Medida DAX (AVERAGE)**, revelou que o modelo **"Esportivo Premium"** possui o Ticket Médio mais elevado.
-**Ação:** O insight sugere focar esforços de marketing e vendas nos modelos de maior valor agregado, como o Esportivo Premium.
+### 2. KPI 2: Ticket Médio de Venda por Modelo (Cálculo DAX)
+**Lógica:** O valor não é uma simples média do visual, mas sim uma **Medida DAX (AVERAGE)** calculada para garantir precisão do Ticket Médio (receita média por transação) em qualquer contexto de filtro.
+**Insight:** Demonstra que o modelo **"Esportivo Premium"** possui o maior valor por venda. Ação: Focar estratégias de marketing nos produtos de maior valor agregado.
 
 ### 3. KPI 3: Distribuição Regional de Vendas
-**Visual:** Gráfico de Rosca.
-**Insight:** Este KPI demonstra a alocação de vendas por região. O gráfico está formatado para exibir apenas o **Percentual do Total**, destacando a concentração do volume de vendas na região mais forte.
-**Ação:** Ajuda a alocar orçamentos de mídia e recursos de equipe com base nas regiões com maior volume transacional.
+**Lógica:** Utiliza a função **Contagem (Count)** dos IDs de Venda e formatação avançada para exibir o **Percentual do Total**, provando a capacidade de configurar visuais para clareza analítica.
+**Insight:** Ajuda a alocar orçamentos de mídia e recursos de equipe com base nas regiões de maior volume transacional.
 
 ---
 
-## Estrutura do Repositório
-
-* `Dashboard_Vendas.pbix`: Arquivo editável do projeto Power BI.
-* `Screenshot_Final.jpg`: Imagem de alta qualidade do dashboard finalizado.
+## Validação do Projeto (Próximos Passos)
+* **Validar a Interatividade:** Clique no link do Power BI Service acima para uma experiência completa.
+* **Validar
